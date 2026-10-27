@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Ανεμώνη · Κομμωτήριο (demo)</title>
+<meta name="description" content="Κλείσε ραντεβού online, όποια ώρα σε βολεύει. Φανταστικό κομμωτήριο, demo της ThetaNorth.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+<style>
+  :root { --ink: #22201E; --cream: #FAF6F0; --rose: #B5675A; --rose-dark: #8F4C41; --line: #E8DFD3; --muted: #6A625B; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--cream); color: var(--ink); font: 400 17px/1.6 "IBM Plex Sans", system-ui, sans-serif; }
+  a { color: var(--rose-dark); }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+  .demo { background: #22201E; color: #F3E9DC; font-size: 13px; text-align: center; padding: 7px 16px; }
+
+  header { padding: 28px 0 40px; }
+  .name { font-family: Manrope, sans-serif; font-weight: 800; font-size: 22px; letter-spacing: -0.01em; }
+  h1 { font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(32px, 6vw, 52px); line-height: 1.1;
+       letter-spacing: -0.02em; margin: 40px 0 14px; max-width: 700px; }
+  .lead { font-size: 19px; color: var(--muted); max-width: 600px; margin: 0 0 26px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-block; padding: 15px 24px; border-radius: 12px; font-weight: 600; font-size: 17px; text-decoration: none; }
+  .btn.main { background: var(--rose); color: #fff; }
+  .btn.alt { border: 2px solid var(--ink); color: var(--ink); }
+
+  section { padding: 44px 0; border-top: 1px solid var(--line); }
+  h2 { font-family: Manrope, sans-serif; font-weight: 800; font-size: 26px; margin: 0 0 18px; letter-spacing: -0.01em; }
+  .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
+  .svc { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .svc b { font-weight: 600; } .svc span { color: var(--muted); font-size: 15px; white-space: nowrap; }
+  .price { font-family: Manrope, sans-serif; font-weight: 800; font-size: 22px; margin-top: 6px; }
+  .small { font-size: 14px; color: var(--muted); }
+
+  table.hours { border-collapse: collapse; width: 100%; max-width: 420px; }
+  .hours td { padding: 8px 0; border-bottom: 1px solid var(--line); }
+  .hours td:last-child { text-align: right; font-weight: 600; }
+  .closed { color: var(--muted); font-weight: 400 !important; }
+
+  .book { background: #fff; border: 2px dashed var(--rose); border-radius: 16px; padding: 22px; }
+  .book iframe { width: 100%; height: 720px; border: 0; border-radius: 12px; display: none; }
+  .map { background: repeating-linear-gradient(45deg, #EFE7DC, #EFE7DC 12px, #F6F0E7 12px, #F6F0E7 24px);
+         border-radius: 14px; min-height: 200px; display: flex; align-items: center; justify-content: center;
+         text-align: center; padding: 20px; color: var(--muted); }
+  footer { padding: 28px 0 40px; font-size: 14px; color: var(--muted); border-top: 1px solid var(--line); }
+  .sticky { position: fixed; left: 16px; right: 16px; bottom: 14px; text-align: center; display: none; }
+  @media (max-width: 640px) { .sticky { display: block; } footer { padding-bottom: 96px; } }
+</style>
+</head>
+<body>
+<div class="demo">Φανταστικό κομμωτήριο: demo σελίδας με online κρατήσεις από τη ThetaNorth. Τα στοιχεία και οι τιμές είναι ενδεικτικά.</div>
+
+<header class="wrap">
+  <div class="name">Studio Ανεμώνη</div>
+  <h1>Κλείσε ραντεβού online, όποια ώρα σε βολεύει.</h1>
+  <p class="lead">Διαλέγεις υπηρεσία, κομμωτή και ώρα από το κινητό. Παίρνεις επιβεβαίωση και υπενθύμιση με email. Χωρίς τηλέφωνα.</p>
+  <div class="btns">
+    <a class="btn main" href="#kratisi">Κλείσε ραντεβού</a>
+    <a class="btn alt" href="tel:+302100000000">Κάλεσε</a>
+  </div>
+</header>
+
+<section id="ypiresies">
+  <div class="wrap">
+    <h2>Υπηρεσίες</h2>
+    <div class="grid">
+      <div class="card"><div class="svc"><b>Ανδρικό κούρεμα</b><span>30′</span></div><div class="price">12 €</div></div>
+      <div class="card"><div class="svc"><b>Γυναικείο κούρεμα</b><span>45′</span></div><div class="price">20 €</div></div>
+      <div class="card"><div class="svc"><b>Βαφή</b><span>90′</span></div><div class="price">45 €</div></div>
+    </div>
+    <p class="small">Ενδεικτικές τιμές του demo.</p>
+  </div>
+</section>
+
+<section id="kratisi">
+  <div class="wrap">
+    <h2>Κράτηση</h2>
+    <div class="book">
+      <!-- Η κράτηση του Setmore (BOOKING_URL, στο τέλος της σελίδας) μέσα σε iframe, και κουμπί που την ανοίγει σε νέα καρτέλα. -->
+      <p id="book-empty">Εδώ μπαίνει η κράτηση της πλατφόρμας: ο πελάτης διαλέγει υπηρεσία, κομμωτή και ώρα, και του έρχεται email επιβεβαίωσης.</p>
+      <iframe id="book-frame" title="Κράτηση ραντεβού" loading="lazy"></iframe>
+      <div class="btns"><a class="btn main" id="book-link" href="#kratisi">Άνοιξε την κράτηση</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="ores">
+  <div class="wrap grid">
+    <div>
+      <h2>Ωράριο</h2>
+      <table class="hours">
+        <tr><td>Τρίτη – Παρασκευή</td><td>9:00 – 20:00</td></tr>
+        <tr><td>Σάββατο</td><td>9:00 – 20:00</td></tr>
+        <tr><td>Κυριακή – Δευτέρα</td><td class="closed">Κλειστά</td></tr>
+      </table>
+    </div>
+    <div>
+      <h2>Πού είμαστε</h2>
+      <div class="map">Οδός Παραδείγματος 1, Αθήνα<br>(φανταστική διεύθυνση· στο κανονικό στήσιμο μπαίνει ο χάρτης του Google)</div>
+    </div>
+  </div>
+</section>
+
+<section id="aporrito">
+  <div class="wrap">
+    <h2>Απόρρητο</h2>
+    <p class="small">Για το ραντεβού κρατάμε μόνο όνομα, τηλέφωνο και email, και τα χρησιμοποιούμε μόνο για την κράτηση και την υπενθύμιση. Η κράτηση γίνεται μέσω της πλατφόρμας Setmore. Δεν τα δίνουμε σε τρίτους για διαφήμιση. Για αλλαγή ή διαγραφή των στοιχείων σου γράψε στο <a href="mailto:info@example.com">info@example.com</a>.</p>
+  </div>
+</section>
+
+<footer class="wrap">Studio Ανεμώνη (φανταστικό) · 210 000 0000 · Demo σελίδας από τη ThetaNorth</footer>
+<div class="sticky"><a class="btn main" href="#kratisi" style="display:block">Κλείσε ραντεβού</a></div>
+
+<script>
+  // Σελίδα κράτησης Setmore της δοκιμής (26/10). Ανοίγει και μέσα σε iframe (χωρίς X-Frame-Options/frame-ancestors, έλεγχος 26/10).
+  const BOOKING_URL = "https://thetanorth.setmore.com";
+  if (BOOKING_URL) {
+    document.getElementById("book-link").href = BOOKING_URL;
+    document.getElementById("book-link").target = "_blank";
+    const f = document.getElementById("book-frame");
+    f.src = BOOKING_URL; f.style.display = "block";
+    document.getElementById("book-empty").style.display = "none";
+  }
+</script>
+</body>
+</html>
