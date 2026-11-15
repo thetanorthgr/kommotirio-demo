@@ -139,7 +139,17 @@
     .sticky.show { opacity: 1; pointer-events: auto; transform: none; }
     .site-footer { padding-bottom: 100px; }
   }
+  /* Απαλή εμφάνιση στο scroll (15/11). Μόνο με JS και μόνο αν ο επισκέπτης δεν έχει ζητήσει λιγότερη κίνηση· η κορυφή δεν κινείται (ταχύτητα φόρτωσης). */
+  .js-anim .rv { opacity: 0; transform: translateY(22px); }
+  .js-anim .rv.in { opacity: 1; transform: none; transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+  @media (hover: hover) {
+    .svc { transition: transform .25s ease, box-shadow .25s ease; }
+    .svc:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(34,32,30,.12); }
+    .gallery img { transition: transform .35s ease; }
+    .gallery img:hover { transform: scale(1.03); }
+  }
 </style>
+<script>if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("js-anim");</script>
 </head>
 <body>
 <div class="demo">Φανταστικό κομμωτήριο: demo σελίδας με online κρατήσεις από τη ThetaNorth. Στοιχεία, τιμές και κριτικές είναι ενδεικτικά.</div>
@@ -333,6 +343,26 @@
     else { do { n = (n + 1) % 7; } while (!DAYS.includes(n)); label = n === (d + 1) % 7 ? "αύριο" : "την " + NAMES[n]; }
     txt.textContent = "Κλειστά τώρα · ανοίγουμε " + label + " στις 9:00 · κλείσε online";
   })();
+
+  // Απαλή εμφάνιση των ενοτήτων στο scroll· οι κάρτες και οι φωτογραφίες έρχονται μία-μία.
+  if (document.documentElement.classList.contains("js-anim")) {
+    const items = [];
+    document.querySelectorAll("main section .wrap > *").forEach(el => {
+      const kids = el.matches(".grid, .gallery") ? [...el.children] : [];
+      if (kids.length) kids.forEach((k, i) => { k.style.transitionDelay = (i % 3) * 90 + "ms"; items.push(k); });
+      else items.push(el);
+    });
+    const ro = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      // μετά την εμφάνιση, το στοιχείο γυρίζει στο κανονικό του (π.χ. το hover των καρτών χωρίς καθυστέρηση)
+      const done = () => { el.classList.remove("rv", "in"); el.style.transitionDelay = ""; };
+      el.addEventListener("transitionend", done, { once: true });
+      setTimeout(done, 1200); // ασφάλεια: ό,τι κι αν γίνει, σε 1,2″ το στοιχείο είναι ορατό
+      el.classList.add("in"); ro.unobserve(el);
+    }), { rootMargin: "0px 0px -6% 0px" });
+    items.forEach(el => { el.classList.add("rv"); ro.observe(el); });
+  }
 </script>
 </body>
 </html>
