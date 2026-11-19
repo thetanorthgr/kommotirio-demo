@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Δικηγορικό γραφείο στο Κολωνάκι</title>
+<meta name="description" content="Δικηγορικό γραφείο στο Κολωνάκι, Αθήνα. Ακίνητα και Golden Visa, επιχειρήσεις, κληρονομικά, οικογενειακά. Ελληνικά και αγγλικά.">
+<!-- ΔΕΙΓΜΑ Β (ThetaNorth, 19/11/2026). Στο τελικό οι γραμματοσειρές φιλοξενούνται στο ίδιο το site. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBFAF7; --bg-2:#F1EEE8; --ink:#1B1B1F; --muted:#5F5E66; --line:#DDD8CE;
+  --wine:#6B1E2A; --wine-d:#541722; --wine-l:#F3E7E6;
+  --serif:"Literata", Georgia, serif; --sans:"IBM Plex Sans", system-ui, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+.label{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--wine)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.015em;line-height:1.12}
+.rule{height:1px;background:var(--ink);opacity:.85}
+/* top */
+.strip{background:var(--wine);color:#F6EDEC;font-size:13.5px}
+.strip .wrap{display:flex;justify-content:space-between;gap:16px;height:38px;align-items:center}
+.strip a{text-decoration:none}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:92px}
+.logo{text-decoration:none;display:flex;align-items:center;gap:14px}
+.mono{width:44px;height:44px;border:1.5px solid var(--wine);display:grid;place-items:center;font-family:var(--serif);font-size:21px;color:var(--wine)}
+.logo b{font-family:var(--serif);font-weight:500;font-size:20px;display:block;line-height:1.1}
+.logo span{font-size:12.5px;color:var(--muted)}
+nav{display:flex;gap:28px;font-size:15px;align-items:center}
+nav a{text-decoration:none}
+nav a:hover{color:var(--wine)}
+.book{background:var(--ink);color:var(--bg);padding:11px 18px;font-weight:600;font-size:14.5px}
+.book:hover{background:var(--wine);color:var(--bg)!important}
+.burger{display:none;font-size:15px;background:none;border:1px solid var(--ink);padding:8px 12px}
+/* hero */
+.hero{padding:70px 0 0}
+.hero h1{font-size:clamp(44px,7.2vw,104px);max-width:1050px}
+.hero h1 i{font-style:italic;color:var(--wine)}
+.hero .row{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin:48px 0 0;padding:30px 0 72px;border-top:1px solid var(--ink)}
+.hero .row p{font-size:20px;color:var(--muted);max-width:520px}
+.hero .acts{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:17px 26px;font-weight:600;font-size:16px;text-decoration:none;transition:.2s}
+.btn-wine{background:var(--wine);color:#fff}.btn-wine:hover{background:var(--wine-d)}
+.btn-plain{border-bottom:1px solid var(--ink);padding:6px 0;font-weight:500}
+.wide{aspect-ratio:21/8;position:relative;background:#2a2a2e}.wide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.wide span{position:absolute;left:28px;bottom:22px;font-size:13px;color:#6E6656;max-width:420px}
+.wide span b{display:block;font-family:var(--serif);font-weight:500;font-size:18px;color:#4A4437}
+/* areas index */
+section{padding:110px 0}
+.head{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:end;margin-bottom:46px}
+.head h2{font-size:clamp(34px,4.4vw,56px)}
+.head p{color:var(--muted);font-size:18px}
+.index{display:grid;grid-template-columns:repeat(2,1fr);gap:0 60px}
+.cat{border-top:1px solid var(--ink);padding:22px 0 36px}
+.cat h3{font-size:15px;font-family:var(--sans);font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--wine);margin-bottom:10px}
+.cat a{display:flex;justify-content:space-between;align-items:baseline;text-decoration:none;padding:12px 0;border-bottom:1px solid var(--line);font-family:var(--serif);font-size:23px}
+.cat a small{font-family:var(--sans);font-size:13px;color:var(--muted)}
+.cat a:hover{color:var(--wine)}
+.cat a::after{content:"→";font-family:var(--sans);font-size:16px;color:var(--wine);opacity:0;transition:.2s}
+.cat a:hover::after{opacity:1}
+/* statement */
+.state{background:var(--bg-2)}
+.state blockquote{font-family:var(--serif);font-size:clamp(28px,3.6vw,46px);line-height:1.25;max-width:980px}
+.state blockquote em{font-style:italic;color:var(--wine)}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:64px}
+.trio div{border-top:1px solid var(--ink);padding-top:18px}
+.trio b{font-family:var(--serif);font-weight:500;font-size:22px;display:block;margin-bottom:6px}
+.trio p{color:var(--muted);font-size:15.5px}
+/* people */
+.people{display:grid;gap:0}
+.p{display:grid;grid-template-columns:90px 1.1fr 1.4fr 220px;gap:36px;padding:34px 0;border-top:1px solid var(--ink);align-items:start}
+.p:last-child{border-bottom:1px solid var(--ink)}
+.init{width:90px;height:110px;object-fit:cover;display:block;background:var(--wine-l)}
+.p h3{font-size:28px}
+.p .t{font-size:14.5px;color:var(--wine);font-weight:600;margin-top:6px}
+.p p{color:var(--muted);font-size:15.5px}
+.p .c{font-size:14.5px;line-height:1.9}
+/* contact */
+.contact{background:var(--wine);color:#F6EDEC}
+.contact .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px}
+.contact h2{font-size:clamp(34px,4.6vw,60px);color:#fff}
+.contact .lead{font-size:19px;opacity:.85;margin:18px 0 34px;max-width:520px}
+.contact form{display:grid;gap:12px;max-width:520px}
+.contact label{font-size:13px;font-weight:600;letter-spacing:.04em;display:grid;gap:6px}
+.contact input,.contact select,.contact textarea{font:inherit;font-size:15.5px;padding:12px 14px;border:1px solid rgba(246,237,236,.4);background:rgba(255,255,255,.08);color:#fff}
+.contact select option{color:var(--ink)}
+.contact textarea{min-height:90px;resize:vertical}
+.contact input::placeholder,.contact textarea::placeholder{color:rgba(246,237,236,.6)}
+.contact .btn{background:#fff;color:var(--wine);border:0;cursor:pointer;justify-self:start}
+.contact dl{display:grid;gap:22px;font-size:18px;align-content:start;padding-top:40px}
+.contact dt{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;opacity:.7}
+.contact dd a{text-decoration:none;border-bottom:1px solid rgba(246,237,236,.4)}
+.small{font-size:13px;opacity:.75;margin-top:16px}
+footer{padding:46px 0 34px;font-size:13.5px;color:var(--muted)}
+footer .top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:26px;border-bottom:1px solid var(--line)}
+footer .legal{padding-top:20px;font-size:12.5px;line-height:1.7}
+footer a{text-decoration:none}
+.demo{position:fixed;right:14px;bottom:14px;background:var(--ink);color:#fff;font-size:12px;padding:7px 11px;z-index:9;letter-spacing:.04em}
+@media (max-width:960px){
+  nav{display:none}.burger{display:block}
+  .hero .row,.head,.contact .grid{grid-template-columns:1fr;gap:28px}
+  .index{grid-template-columns:1fr}
+  .trio{grid-template-columns:1fr;gap:24px}
+  .p{grid-template-columns:72px 1fr;gap:18px 22px}
+  .p p,.p .c{grid-column:2}
+  .init{width:72px;height:88px}
+  section{padding:76px 0}
+  .wide{aspect-ratio:16/10}
+}
+@media (max-width:560px){
+  .wrap{padding:0 18px}
+  body{font-size:16px}
+  .strip .hide{display:none}
+  .hero{padding-top:40px}
+  .hero .row p{font-size:18px}
+  .cat a{font-size:20px}
+  .btn-wine{width:100%;justify-content:center}
+  header .wrap{height:76px}
+  .logo{gap:10px}.mono{width:38px;height:38px;font-size:18px}
+  .logo b{font-size:16.5px}.logo span span{font-size:11.5px}
+  .cat a small{display:none}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LegalService","name":"Δικηγορικό Γραφείο (δείγμα)","address":{"@type":"PostalAddress","addressLocality":"Αθήνα","addressCountry":"GR"},"telephone":"+302100000000","email":"info@example.com","openingHours":"Mo-Fr 09:00-17:00"}
+</script>
+</head>
+<body>
+<div class="strip"><div class="wrap"><span>Κολωνάκι, Αθήνα <span class="hide">· Δευ–Παρ 9:00–17:00</span></span><span><a href="tel:+302100000000">210 000 0000</a> · <b>ΕΛ</b> / <a href="#">EN</a></span></div></div>
+<header><div class="wrap">
+  <a class="logo" href="#"><span class="mono">§</span><span><b>Δικηγορικό Γραφείο</b><span>Κολωνάκι · Αθήνα</span></span></a>
+  <nav><a href="#tomeis">Τομείς</a><a href="#grafeio">Το γραφείο</a><a href="#dikigoroi">Δικηγόροι</a><a href="#epikoinonia" class="book">Επικοινωνία</a></nav>
+  <button class="burger">Μενού</button>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="label">Δικηγορικό γραφείο στο Κολωνάκι</div>
+  <h1 style="margin-top:18px">Σας ακούμε, σας εξηγούμε, <i>σας εκπροσωπούμε.</i></h1>
+  <div class="row">
+    <p>Από την αγορά ενός ακινήτου ως μια κληρονομιά ή μια εταιρική διαφορά, μιλάτε απευθείας με τον δικηγόρο που χειρίζεται την υπόθεσή σας.</p>
+    <div class="acts">
+      <a class="btn btn-wine" href="#epikoinonia">Ζητήστε συνάντηση</a>
+      <a class="btn-plain" href="#tomeis">Δείτε τους 14 τομείς ↓</a>
+    </div>
+  </div>
+</div>
+<div class="wrap"><div class="wide"><img src="https://images.unsplash.com/photo-1587336160148-b4f203fec6b3?w=2000&amp;q=80&amp;auto=format&amp;fit=crop" alt="Ο ναός του Ηφαίστου στην Αθήνα"></div></div>
+</div>
+
+<section id="tomeis"><div class="wrap">
+  <div class="head">
+    <h2>Τομείς δραστηριότητας</h2>
+    <p>Κάθε τομέας έχει δική του σελίδα: τι καλύπτουμε, πώς προχωράμε και απαντήσεις στις πιο συχνές ερωτήσεις.</p>
+  </div>
+  <div class="index">
+    <div class="cat"><h3>Ακίνητα &amp; επενδύσεις</h3>
+      <a href="#">Δίκαιο ακινήτων <small>αγορά · πώληση · μισθώσεις</small></a>
+      <a href="#">Golden Visa <small>ΕΛ · EN</small></a>
+      <a href="#">Δίκαιο ενέργειας</a></div>
+    <div class="cat"><h3>Επιχειρήσεις</h3>
+      <a href="#">Εμπορικό δίκαιο <small>ίδρυση ως λύση</small></a>
+      <a href="#">Φορολογικό δίκαιο</a>
+      <a href="#">Πνευματική ιδιοκτησία</a>
+      <a href="#">Πτωχευτικό δίκαιο</a>
+      <a href="#">Αεροπορικό δίκαιο</a></div>
+    <div class="cat"><h3>Ιδιώτες &amp; οικογένεια</h3>
+      <a href="kleronomiko.html">Κληρονομικό δίκαιο <small>διαθήκες · αποδοχή</small></a>
+      <a href="#">Οικογενειακό δίκαιο <small>διαζύγιο · επιμέλεια</small></a>
+      <a href="#">Προστασία καταναλωτή</a>
+      <a href="#">Υπερχρεωμένα νοικοκυριά</a>
+      <a href="#">Ιατρικό &amp; φαρμακευτικό δίκαιο</a></div>
+    <div class="cat"><h3>Δικαστήρια</h3>
+      <a href="#">Ποινικό δίκαιο</a>
+      <a href="#">Αναγκαστική εκτέλεση <small>ανακοπές · αναστολές</small></a></div>
+  </div>
+</div></section>
+
+<section class="state" id="grafeio"><div class="wrap">
+  <div class="label" style="margin-bottom:22px">Το γραφείο</div>
+  <blockquote>Ένα μικρό γραφείο, με την ίδια φροντίδα σε κάθε υπόθεση: <em>ο ίδιος δικηγόρος από την πρώτη συνάντηση ως το τέλος.</em></blockquote>
+  <div class="trio">
+    <div><b>Απευθείας επαφή</b><p>Έχετε το email και το τηλέφωνο του δικηγόρου σας, όχι μιας γραμματείας.</p></div>
+    <div><b>Καθαρά βήματα</b><p>Πριν ξεκινήσουμε ξέρετε τι θα γίνει, πόσο θα πάρει, και η αμοιβή συμφωνείται γραπτώς.</p></div>
+    <div><b>Ελληνικά &amp; αγγλικά</b><p>Εξυπηρετούμε και πελάτες από το εξωτερικό, για ακίνητα, κληρονομιές και Golden Visa.</p></div>
+  </div>
+</div></section>
+
+<section id="dikigoroi"><div class="wrap">
+  <div class="head"><h2>Οι δικηγόροι</h2><p>Μέλη του Δικηγορικού Συλλόγου Αθηνών.</p></div>
+  <div class="people">
+    <div class="p"><img class="init" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&amp;q=80&amp;auto=format&amp;fit=crop&amp;crop=faces" alt="Πορτρέτο δικηγόρου">
+      <div><h3>Επικεφαλής δικηγόρος</h3><div class="t">Δικηγόρος παρ' Αρείω Πάγω</div></div>
+      <p>Μέλος του Δικηγορικού Συλλόγου Αθηνών. Ασχολείται κυρίως με το εμπράγματο δίκαιο, τα ακίνητα και τις κληρονομιές.</p>
+      <div class="c">Ελληνικά · English<br>ΔΣΑ Α.Μ. [αριθμός]</div></div>
+    <div class="p"><img class="init" src="https://images.unsplash.com/photo-1685760259914-ee8d2c92d2e0?w=400&amp;q=80&amp;auto=format&amp;fit=crop&amp;crop=faces" alt="Πορτρέτο δικηγόρου">
+      <div><h3>Συνεργάτις δικηγόρος</h3><div class="t">Δικηγόρος παρ' Πρωτοδίκαις</div></div>
+      <p>Μέλος του Δικηγορικού Συλλόγου Αθηνών. Ασχολείται κυρίως με το οικογενειακό δίκαιο και την προστασία του καταναλωτή.</p>
+      <div class="c">Ελληνικά · English<br>ΔΣΑ Α.Μ. [αριθμός]</div></div>
+  </div>
+</div></section>
+
+<section class="contact" id="epikoinonia"><div class="wrap grid">
+  <div>
+    <div class="label" style="color:#F2C9C4">Επικοινωνία</div>
+    <h2 style="margin-top:14px">Πείτε μας τι χρειάζεστε.</h2>
+    <p class="lead">Στείλτε μας ένα μήνυμα ή πάρτε τηλέφωνο, και σας καλούμε για να ορίσουμε συνάντηση, στο γραφείο ή τηλεφωνικά. Η συνάντηση δεν σημαίνει ανάθεση της υπόθεσης.</p>
+    <form onsubmit="return false">
+      <label>Ονοματεπώνυμο<input autocomplete="name"></label>
+      <label>Τηλέφωνο ή email<input></label>
+      <label>Θέμα<select><option>Ακίνητα &amp; Golden Visa</option><option>Επιχειρήσεις</option><option>Κληρονομικά</option><option>Οικογενειακά</option><option>Άλλο</option></select></label>
+      <label>Λίγα λόγια (προαιρετικά)<textarea placeholder="Μη γράφετε εδώ λεπτομέρειες της υπόθεσης. Θα τα πούμε στη συνάντηση."></textarea></label>
+      <button class="btn" type="submit">Αποστολή μηνύματος →</button>
+    </form>
+    <p class="small">Με την αποστολή διαβάσατε την <a href="#" style="color:inherit">Πολιτική απορρήτου</a>.</p>
+  </div>
+  <dl>
+    <div><dt>Διεύθυνση</dt><dd>Κολωνάκι, Αθήνα<br><a href="https://maps.google.com/?q=Κολωνάκι+Αθήνα">Οδηγίες στο Google Maps</a></dd></div>
+    <div><dt>Τηλέφωνο</dt><dd><a href="tel:+302100000000">210 000 0000</a></dd></div>
+    <div><dt>Email</dt><dd><a href="mailto:info@example.com">info@example.com</a></dd></div>
+    <div><dt>Ωράριο</dt><dd>Δευτέρα–Παρασκευή, 9:00–17:00</dd></div>
+  </dl>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="top"><span><b style="color:var(--ink)">Δικηγορικό Γραφείο</b> · Κολωνάκι, Αθήνα</span><span><a href="#">Τομείς</a> · <a href="#">Το γραφείο</a> · <a href="#">Δικηγόροι</a> · <a href="#">English</a></span></div>
+  <div class="legal">Κολωνάκι, Αθήνα · info@example.com · ΑΦΜ [αριθμός] · Δ.Ο.Υ. [ΔΟΥ] · Μέλη του Δικηγορικού Συλλόγου Αθηνών · Διέπονται από τον Κώδικα Δικηγόρων (ν. 4194/2013) και τον Κώδικα Δεοντολογίας · <a href="#">Πολιτική απορρήτου</a> · <a href="#">Cookies</a> · Φωτογραφίες: Unsplash</div>
+</div></footer>
+<div class="demo">ΔΕΙΓΜΑ Β · Στατικό site · ThetaNorth</div>
+</body>
+</html>
