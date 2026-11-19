@@ -55,10 +55,10 @@ article section{margin-bottom:64px}
 .hero-img{margin-bottom:56px}.hero-img img{width:100%;aspect-ratio:16/7;object-fit:cover;display:block}
 .who b{font-family:var(--serif);font-weight:500;font-size:22px;display:block}.who span{color:var(--muted);font-size:15px}
 footer{padding:36px 0;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
-.demo{position:fixed;right:14px;bottom:14px;background:var(--ink);color:#fff;font-size:12px;padding:7px 11px;z-index:9}
+.demo{position:fixed;right:14px;bottom:14px;background:var(--ink);color:#fff;font-size:12px;padding:7px 11px;z-index:9}@media (max-width:760px){.demo{position:static;display:block;text-align:center}}
 @media (max-width:960px){nav{display:none}.burger{display:block}.layout{grid-template-columns:1fr;gap:36px;padding-top:40px}.toc{position:static}.toc a{display:none}.steps{grid-template-columns:1fr}.list{columns:1}}
 @media (max-width:560px){header .wrap{height:76px}.logo{gap:10px}.mono{width:38px;height:38px;font-size:18px}.logo b{font-size:16.5px}.wrap{padding:0 18px}body{font-size:16px}.title p{font-size:18px}.faq summary{font-size:20px}}
-</style>
+header{position:relative}@media (max-width:960px){header.open nav{display:flex;flex-direction:column;align-items:stretch;gap:0;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--ink);padding:4px 18px 18px;z-index:20}header.open nav a{padding:14px 0;border-bottom:1px solid rgba(0,0,0,.08)}header.open nav a.book{margin-top:14px;text-align:center;border:0}}</style>
 </head>
 <body>
 <div class="strip"><div class="wrap"><span>Κολωνάκι, Αθήνα</span><span><a href="tel:+302100000000">210 000 0000</a> · <b>ΕΛ</b> / <a href="#">EN</a></span></div></div>
@@ -106,5 +106,5 @@ footer{padding:36px 0;font-size:13px;color:var(--muted);border-top:1px solid var
 </div>
 <footer><div class="wrap">Δικηγορικό Γραφείο · Κολωνάκι, Αθήνα · Μέλη ΔΣΑ · ΑΦΜ [αριθμός] · <a href="#">Πολιτική απορρήτου</a> · Φωτογραφίες: Unsplash</div></footer>
 <div class="demo">ΔΕΙΓΜΑ Β · Στατικό site · ThetaNorth</div>
-</body>
+<script>(function(){var b=document.querySelector('.burger'),h=b.closest('header');b.setAttribute('aria-expanded','false');b.addEventListener('click',function(){var o=h.classList.toggle('open');b.textContent=o?'Κλείσιμο':'Μενού';b.setAttribute('aria-expanded',o)});h.querySelectorAll('nav a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('open');b.textContent='Μενού'})})})();</script></body>
 </html>
